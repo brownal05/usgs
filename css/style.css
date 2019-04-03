@@ -27,7 +27,7 @@ body,
 }
 
 .legend .coming-soon {
-  color: #f4ba48;
+  color: rgb(180, 177, 0)
 }
 
 .legend .healthy {
@@ -37,3 +37,5 @@ body,
 .legend .out-of-order {
   color: #007dff;
 }
+
+color : yell

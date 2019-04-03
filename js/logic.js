@@ -38,24 +38,24 @@ lightmap.addTo(map);
 //     "Tectonic Plate Boundries" : plateLines
 // }
 
-L.control.layers(baseMaps, overlayMaps).addTo(map);
-var legend = L.control({
+L.control.layers(null, overlayMaps).addTo(map);
+var info = L.control({
     position: "topright"
   });
 
-  legend.onAdd = function() {
-    var div = L.DomUtil.create("div", "legend");
-    var lables = "<h1>0-1</h1>" +
-    "<div class=\"labels\">" +
-      "<div class=\"min\">" + limits[0] + "</div>" +
-      "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
-    "</div>";
-    return div;
-  };
+  info.onAdd = function() {
+    var div = L.DomUtil.create('div', 'legend'); 
+    return div;}
+  // var grades = [0,1,2,3,4,5,6];
+  var labels = ["0-1","1-2","2-3","3-4","4-5","5-6", "+7"];
+  var 
+  info.addTo(map);
+  var legendText = labels.join('<br>');
+d3.select(".legend") // select the div with class '.legend.leaflet-control'
+    .html(legendText);
+    
 
-  legend.addTo(map);
 
-  
 }
 
 function createMarkers(response) {
